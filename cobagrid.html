@@ -4,107 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Responsive Grid</title>
+    <title>CSS Konaep Grid</title>
     <style>
-        div.article {
-            width: 80%;
-            margin: 0 auto;
-            column-count: 3;
-            column-gap: 30px;
-            column-rule-style: solid;
-            column-rule-width: 2px;
-            column-rule-color: #000;
-            background: #012051;
-            color: #fff;
-            padding: 10px;
+        * {
+            box-sizing: border-box;
         }
 
-        @media only screen and (max-width:768px) {
-            div.article {
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .col-1 {
+                width: 10%;
+            }
+
+            .col-2 {
+                width: 20%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 40%;
+            }
+
+            .col-5 {
+                width: 50%;
+            }
+
+            .col-6 {
+                width: 60%;
+            }
+
+            .col-7 {
+                width: 70%;
+            }
+
+            .col-8 {
                 width: 80%;
-                margin: 0 auto;
-                column-count: 2;
-                column-gap: 30px;
-                column-rule-style: solid;
-                column-rule-width: 2px;
-                column-rule-color: #000;
-                background: #FFC6C6;
-                color: #fff;
-                padding: 10px;
+            }
+
+            .col-9 {
+                width: 90%;
+            }
+
+            .col-10 {
+                width: 100%;
             }
 
         }
-
-        @media only screen and (max-width:600px) {
-            div.article {
-                width: 80%;
-                margin: 0 auto;
-                column-count: 1;
-                column-gap: 30px;
-                column-rule-style: solid;
-                column-rule-width: 2px;
-                column-rule-color: #000;
-                background: #644A07;
-                color: #fff;
-                padding: 10px;
-            }
-        }
+        .bg-green{background: green; color: aqua;}
+        .bg-red{background: red; color: aqua;}
+        .bg-blue{background: blue; color: aqua;}
+        .bg-brown{background: brown; color: aqua;}
     </style>
 </head>
 
 <body>
-    <div class="article">
-        <p>
-            Sebuah papan signage di Tugu Titik Nol Ibu Kota Nusantara (IKN) tiba-tiba ramai dibicarakan di media sosial.
-            Bukan karena kemegahan desainnya, melainkan karena tulisan yang terpampang justru adalah Lorem Ipsum Dolor
-            Amet, Consectetuer Idipiscing Elit, sebuah teks dummy yang biasa digunakan dalam desain grafis dan bisa
-            diedit sesuai kebutuhan.
-            Tulisan tersebut sontak memicu perdebatan publik soal ketelitian dan kesiapan proyek berskala nasional.
-            Banyak yang mempertanyakan bagaimana teks uji coba tersebut bisa lolos pemasangan di lokasi yang begitu
-            penting secara simbolis dan politis.
-            Menanggapi fenomena viral tersebut, Plt. Deputi Bidang Sarana dan Prasarana Otorita IKN Danis Hidayat
-            Sumadilaga mengonfirmasi bahwa tulisan yang terpampang itu memang belum final.
-            “Signage (tugu) tersebut nantinya akan memuat narasi tentang asal-usul serta menceritakan sejarah berdirinya
-            IKN,” jelas Danis kepada media mengutip Wartakotalive, Sabtu (19/4/2025).
-        </p>
-
-        <p>
-            Ia menjelaskan bahwa teks tersebut hanyalah pengisi sementara yang biasa digunakan dalam proses desain
-            grafis dan layout.
-            “Kata Lorem Ipsum adalah teks standar yang digunakan sebagai pengisi narasi sementara. Teks tersebut tidak
-            memiliki arti khusus,” tegasnya.
-            Danis juga menyebutkan bahwa narasi yang seharusnya tertulis di papan signage tersebut sedang dalam tahap
-            pengerjaan dan produksi, dan akan segera diganti.
-            “Saat ini stiker dengan narasi yang benar dalam proses produksi,” ujarnya.
-        </p>
-
-        <p>
-            Fenomena ini secara tidak langsung mengundang rasa penasaran masyarakat tentang apa sebenarnya arti dari
-            kalimat lorem ipsum. Menurut informasi yang beredar, teks ini berasal dari karya Marcus Tullius Cicero,
-            seorang filsuf Romawi kuno pada 45 SM.
-
-            Versi lengkap kalimat tersebut mengandung makna filosofis:
-
-            “Demikian pula, tidak adakah orang yang mencintai atau mengejar atau ingin mengalami penderitaan, bukan
-            semata-mata karena penderitaan itu sendiri, tetapi karena sesekali terjadi keadaan di mana susah-payah dan
-            penderitaan dapat memberikan kepadanya kesenangan yang besar.”
-
-            Namun, dalam konteks desain modern, kalimat ini hanya berfungsi sebagai placeholder tanpa makna, digunakan
-            untuk mengisi ruang sebelum konten asli tersedia. Sayangnya, dalam kasus ini, placeholder tersebut justru
-            terpasang di lokasi publik tanpa koreksi akhir— sehingga menimbulkan kesan kurang teliti.
-        </p>
-
-        <p>
-            Sebagai langkah cepat, Otorita IKN menutup signage tersebut dengan plastik biru, seperti yang tampak dalam
-            dokumentasi foto resmi.
-
-            Hal ini dilakukan sembari menunggu narasi final yang sedang dipersiapkan untuk menggambarkan asal-usul serta
-            visi dari Ibu Kota Nusantara.
-
-            Kejadian ini sekaligus menjadi pengingat pentingnya koordinasi antara tim produksi, desain, dan komunikasi,
-            terutama dalam proyek strategis nasional. Ketelitian bukan sekadar teknis, tetapi juga soal membangun citra
-            dan kepercayaan publik terhadap keberlanjutan dan keseriusan pembangunan IKN.
-        </p>
+    <h3>grid 4</h3>
+    <div class="col-3 col-s-6 bg-red">
+        satu layar jadi 4, kotak berukuran 3 (?)
+    </div>
+    <div class="col-3 col-s-6 bg-blue">
+        satu layar jadi 4, kotak berukuran 3 (?)
+    </div>
+    <div class="col-3 col-s-6 bg-green">
+        satu layar jadi 4, kotak berukuran 3 (?)
+    </div>
+    <div class="col-3 col-s-6 bg-brown">
+        satu layar jadi 4, kotak berukuran 3 (?)
     </div>
 </body>
 
